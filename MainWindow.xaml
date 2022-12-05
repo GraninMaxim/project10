@@ -1,0 +1,30 @@
+﻿<Window x:Class="project10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project10"
+        mc:Ignorable="d"
+        Title="Практическая работа №10" Height="440" Width="449" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="209*"/>
+            <ColumnDefinition Width="156*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Исходный массив" Margin="81,17,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="110" Width="300" Grid.ColumnSpan="2">
+            <Grid>
+                <Label Content="Введите количество элементов:" Margin="14,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="200"/>
+                <TextBox x:Name="inpItemsCount" Margin="219,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="60"/>
+                <Button Content="Создать и заполнить" HorizontalAlignment="Center" Margin="5,45,0,0" VerticalAlignment="Top" Height="30" Width="265" Click="Create_and_Fill_Click"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="Очистить" HorizontalAlignment="Left" Height="30" Margin="80,291,0,0" VerticalAlignment="Top" Width="297" Click="Clear_Click" Grid.ColumnSpan="2" />
+        <Button Content="Изменить массив" HorizontalAlignment="Left" Height="30" Margin="80,256,0,0" VerticalAlignment="Top" Width="297" Click="Change_Click" Grid.ColumnSpan="2"/>
+        <Button Content="О программе" HorizontalAlignment="Left" Height="30" Margin="80,326,0,0" VerticalAlignment="Top" Width="297" Click="About_Program_Click" Grid.ColumnSpan="2"/>
+        <Button Content="Выход" HorizontalAlignment="Left" Height="30" Margin="80,361,0,0" VerticalAlignment="Top" Width="297" Click="Close_Click" Grid.ColumnSpan="2"/>
+        <Label Content="Исходный массив:" HorizontalAlignment="Left" Margin="80,122,0,0" VerticalAlignment="Top"/>
+        <Label Content="Измененный массив:" HorizontalAlignment="Left" Margin="231,122,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="sourceData" Margin="80,148,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="100" Width="146"/>
+        <ListBox x:Name="currentData" Margin="231,148,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="100" Width="146" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
